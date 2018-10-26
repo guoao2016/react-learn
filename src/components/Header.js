@@ -7,7 +7,7 @@ export default class Header extends Component {
       <div className="container">
         <div className="row">
           <div className="col-xs-1 clo-xs-offset-11">
-            <h1>Header</h1>
+            <h1>Header-test</h1>
           </div>
         </div>
 
