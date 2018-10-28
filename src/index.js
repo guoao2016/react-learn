@@ -4,7 +4,27 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import {createStore} from 'redux';
+import reducer from './reducers/counter';
+
+const store = createStore(reducer);
+
+store.subscribe( ()=> console.log('State updated!', store.getState()));
+
+store.dispatch({
+    type: "INCREMENT"
+})
+
+const render = ()=> {
+    ReactDOM.render(
+        <App onIncrement= {()=> store.dispatch({type: 'INCREMENT'})}
+            onDecrement= {()=> store.dispatch({type: 'DECREMENT'})}
+            value = {store.getState()}
+        />, document.getElementById('root'));
+}
+render();
+
+store.subscribe(render);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
