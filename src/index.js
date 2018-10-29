@@ -21,7 +21,7 @@ const render = ()=> {
             onDecrement= {()=> store.dispatch({type: 'DECREMENT'})}
             value = {store.getState()}
         />, document.getElementById('root'));
-}
+};
 render();
 
 store.subscribe(render);
