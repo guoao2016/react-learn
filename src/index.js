@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import {createStore} from 'redux';
-import reducer from './reducers/counter';
+import reducer from './reducers1/counter';
 
 const store = createStore(reducer);
 

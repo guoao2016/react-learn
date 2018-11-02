@@ -15,6 +15,8 @@ import Vip from './pages/Vip';
 import ReduxTest from './pages/ReduxTest';
 import AntTable from './pages/AntTable';
 import AntTableAuto from './pages/AntTableAuto';
+import ReportConfig from './pages/reportConfig';
+import ReportConfig2 from './pages/reportConfig2';
 
 class App extends Component {
 
@@ -28,7 +30,7 @@ class App extends Component {
         <div className="container">
         <div className="row">
           <div className="col-xs-1 clo-xs-offset-11">
-            <Home />
+            <Home test= "home-test"/>
           </div>
         </div>
         <div className="row">
@@ -72,6 +74,8 @@ class App extends Component {
           <Route path="/redux" component={ReduxTest} />
           <Route path="/antTable" component={AntTable} />
           <Route path="/antTable2" component={AntTableAuto} />
+          <Route path="/config" component={ReportConfig} />
+          <Route path="/config2" component={ReportConfig2} />
         </Router>
       </div>  
     );

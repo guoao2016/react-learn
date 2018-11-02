@@ -11,6 +11,7 @@ export default class Header extends Component {
         <div className="row">
           <div className="col-xs-1 clo-xs-offset-11">
             <h1>home</h1>
+            <p>{this.props.test}</p>
             {
               content
             }
